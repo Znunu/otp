@@ -14,7 +14,7 @@ optional arguments:
   -s, --secure          prevent key from being re-used
   ```
 # keygen
-The key is merely a file with random bytes. You use the keygen script to generate one. It uses the python os.urandom() function for the random bytes.
+You use the keygen script to generate the key. It uses the python os.urandom() function internally.
 ```console
 usage: keygen.py [-h] size {kb,mb,gb,tb} path
 
@@ -25,4 +25,5 @@ positional arguments:
   {kb,mb,gb,tb}  unit of size
   path           key file
 ```
-You can also use your own DRBG, seeded from a secondary key. This will reduce the key-length at the cost of weaker encryption. 
+- You can also use your own DRBG, seeded from a secondary key. This will reduce the key-length at the cost of weaker encryption.
+- Another option is to use a TRNG, with a key-length the size of the message. This offers perfect/maximum encryption.
