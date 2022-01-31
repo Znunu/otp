@@ -1,5 +1,5 @@
 
-import secrets
+import os
 import enum
 import argparse
 import pathlib
@@ -12,7 +12,7 @@ class size(enum.Enum):
 
 def gen(path,size):
     with open(path, 'wb') as f:
-        rnd = secrets.token_bytes(size)
+        rnd = os.urandom(size)
         f.write(rnd)
 
 if __name__ == '__main__':
