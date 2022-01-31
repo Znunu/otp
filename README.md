@@ -14,7 +14,7 @@ optional arguments:
   -s, --secure          prevent key from being re-used
   ```
 # keygen
-The key is merely a file with random bytes. You use the keygen script to generate one. It uses the python built-in secrets module as DRBG.
+The key is merely a file with random bytes. You use the keygen script to generate one. It uses the python os.urandom() function for the random bytes.
 ```console
 usage: keygen.py [-h] size {kb,mb,gb,tb} path
 
