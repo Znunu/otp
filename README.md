@@ -11,7 +11,7 @@ positional arguments:
 ```
 # otp
 ```console
-usage: otp.py [-h] [-s | --secure] key input output
+usage: otp.py [-h] [-s] key input output
 
 OTP Encryption
 
